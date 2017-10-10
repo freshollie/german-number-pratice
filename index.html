@@ -1,0 +1,27 @@
+﻿<html>
+    <head>
+        <title> Number learning </title>
+        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+        <script src="js/modules/jquery.min.js"></script>
+        <script src="js/modules/timer.jquery.min.js"></script>
+        <script src="js/modules/numbers2words.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <h3 id="currentTime"></h3>
+        <h3 id="averageTime" style="color: green;">Average: </h3>
+        <h4 id="word"></h4>
+        
+        <input type="button" onclick="game.speakNumber();" id="replayButton" value="Replay">
+        <br/>
+        <br/>
+        
+        <h3 id="wrongText" style="color: red; display: none;">Wrong Answer</h3>
+        
+        <form id="gameInput">
+            <input type="text" id="numberInput">
+            <input type="submit" id="checkButton" value="check">
+        </form>
+       
+    </body>
+</html>
