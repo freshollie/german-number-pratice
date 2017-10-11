@@ -67,23 +67,23 @@ const game = {
     },
                                                                 
     speakNumber: function() {
-        responsiveVoice.speak(translator.toWords(game.currentNumber), voice);
+        responsiveVoice.speak(translator.toWords(game.currentNumber), voice, {rate: 1 + Math.random() * 0.3});
     },
     
     completeRound: function() {
         stopWatch.stop();
         game.times.push(stopWatch.getTime());
-        $("#averageTime").html("Average: " + makeTimeString(getAvg(game.times)));
+        $("#averageTime").html("Average: " + makeTimeString(getAvg(game.times)) + ", Answered: " + game.times.length);
+        new Audio("sounds/correct.mp3").play();
     },
     
     checkAnswer: function() {
         if ($("#numberInput").val() && parseInt($("#numberInput").val()) == game.currentNumber) {
-            $("#wrongText").hide();
             game.completeRound();
             game.newRound();
             return false;
         } else {
-            $("#wrongText").show();
+            new Audio("sounds/wrong.mp3").play();
         }
         $("#numberInput").val("");
         
