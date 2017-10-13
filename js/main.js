@@ -95,7 +95,7 @@ const game = {
     },
         
     newRound: function() {
-        $("#numberInput").val("");
+        $("#numberInput").val("").focus();
         stopWatch.stop();
         game.makeNewNumber();
         game.showWord();
