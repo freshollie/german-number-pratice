@@ -73,7 +73,8 @@ const game = {
     completeRound: function() {
         stopWatch.stop();
         game.times.push(stopWatch.getTime());
-        $("#averageTime").html("Average: " + makeTimeString(getAvg(game.times)) + ", Answered: " + game.times.length);
+        $("#averageTime").html("Average time: " + makeTimeString(getAvg(game.times)));
+        $("#numAnswered").html("Answered: " + game.times.length);
         new Audio("sounds/correct.mp3").play();
     },
     
