@@ -9,40 +9,40 @@
         
         <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
         <script src="js/modules/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
         <script src="js/modules/timer.jquery.min.js"></script>
         <script src="js/modules/numbers2words.min.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
-		
+        
         <div class="container">
             <div class="card" style="max-width: 50rem; width: auto; margin: auto;">
-				
-				
-                <div class="card-block" style="margin: 10px;">
-					<h1 class="card-title">German Number Practice</h1>
-					<h6 id="averageTime" style="color: green;">Average time: </h3>
-					<h6 id="numAnswered" style="color: green;">Answered: </h3>
                 
-					<div style="padding-top: 30px; padding-bottom: 30px;">
-						<h4 id="word" style="font-weight: bold; padding-top: 50px"></h4>
+                
+                <div class="card-block" style="margin: 10px;">
+                    <h1 class="card-title">German Number Practice</h1>
+                    <h6 id="averageTime" style="color: green;">Average time: </h3>
+                    <h6 id="numAnswered" style="color: green;">Answered: </h3>
+                
+                    <div style="padding-top: 30px; padding-bottom: 30px;">
+                        <h4 id="word" style="font-weight: bold; padding-top: 50px"></h4>
 
-						<h4 id="currentTime"></h4>
-					</div>
-					
-					<div style="padding-top: 20px;">
+                        <h4 id="currentTime"></h4>
+                    </div>
+                    
+                    <div style="padding-top: 20px;">
 
-						<input class="btn" type="button" onclick="game.speakNumber();" id="replayButton" value="Replay" style="float: left">
+                        <input class="btn" type="button" onclick="game.speakNumber();" id="replayButton" value="Replay" style="float: left">
 
-						<form id="gameInput" style="float: right">
-							<input type="number" id="numberInput">
-							<input type="submit" class="btn" id="checkButton" value="check">
-						</form>
-					</div>
+                        <form id="gameInput" style="float: right">
+                            <input type="number" id="numberInput">
+                            <input type="submit" class="btn" id="checkButton" value="check">
+                        </form>
+                    </div>
                 </div>
             </div>
-			<p style="font-size: 10px; float: right; margin: 10px">Copyright Oliver Bell 2017 (<a href="http://github.com/freshollie/german-number-tester">source</a>)</p>
+            <p style="font-size: 10px; float: right; margin: 10px">Copyright Oliver Bell 2017 (<a href="http://github.com/freshollie/german-number-tester">source</a>)</p>
         </div>
     </body>
 </html>
