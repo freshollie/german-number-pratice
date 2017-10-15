@@ -22,11 +22,14 @@
                 
                 <div class="card-block" style="margin: 10px;">
                     <h1 class="card-title">German Number Practice</h1>
-                    <h6 id="averageTime" style="color: green;">Average time: </h3>
-                    <h6 id="numAnswered" style="color: green;">Answered: </h3>
+                    <h6 id="averageTime" style="color: green;">Average time: </h6>
+                    <h6 id="numAnswered" style="color: green;">Answered: 0</h6>
+                    
+                    <label style="float: right;">Show word</label>
+                    <input type="checkbox" id="showWordCheckbox" style="float: right;">
                 
                     <div style="padding-top: 30px; padding-bottom: 30px;">
-                        <h4 id="word" style="font-weight: bold; padding-top: 50px"></h4>
+                        <h4 id="word" style="font-weight: bold; padding-top: 50px; display:none;"></h4>
 
                         <h4 id="currentTime"></h4>
                     </div>
@@ -35,8 +38,8 @@
 
                         <input class="btn" type="button" onclick="game.speakNumber();" id="replayButton" value="Replay" style="float: left">
 
-                        <form id="gameInput" style="float: right">
-                            <input type="number" id="numberInput">
+                        <form id="submitAnswerButton" style="float: right">
+                            <input type="number" autocomplete="off" id="numberInput">
                             <input type="submit" class="btn" id="checkButton" value="check">
                         </form>
                     </div>

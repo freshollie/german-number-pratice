@@ -102,6 +102,9 @@ const game = {
         game.showWord();
         game.speakNumber();
         stopWatch.start();
+    },
+    
+    handleInput: function() {
     }
 }
     
@@ -109,8 +112,25 @@ const game = {
 
 $(document).ready(function() {
     game.newRound();
-    $("#gameInput").submit(function(e) {
+    $("#submitAnswerButton").submit(function(e) {
         e.preventDefault();
         game.checkAnswer();
     });
+    
+    $("#showWordCheckbox").on("click", function() {
+        if ($("#showWordCheckbox").prop("checked")) {
+            $("#word").show();
+        } else {
+            $("#word").hide();
+        }
+    });
+}).keypress(function(event) {
+    if (!$("#numberInput").is(":focus")) {
+        $("#numberInput").focus();
+        if (event.which == 13) {
+            game.checkAnswer();
+        } else {
+            $("#numberInput").trigger(event);
+        }
+    }
 });
